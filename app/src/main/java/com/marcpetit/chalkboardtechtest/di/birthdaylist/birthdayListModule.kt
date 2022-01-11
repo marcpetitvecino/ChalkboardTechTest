@@ -9,8 +9,10 @@ import com.marcpetit.chalkboardtechtest.domain.birthday.BirthdayDomainModel
 import com.marcpetit.chalkboardtechtest.domain.birthdaylist.BirthdayListDataSource
 import com.marcpetit.chalkboardtechtest.domain.birthdaylist.GetBirthdayListUseCase
 import com.marcpetit.chalkboardtechtest.domain.birthdaylist.GetBirthdayListUseCaseImpl
+import com.marcpetit.chalkboardtechtest.presentation.birthdaylist.BirthdayListFragmentViewModel
 import com.marcpetit.data.network.NetworkClient
 import com.marcpetit.data.repository.Mapper
+import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.qualifier.named
 import org.koin.dsl.module
 
@@ -35,4 +37,6 @@ val birthdayListModule = module {
             birthdayListDataSource = get()
         )
     }
+
+    viewModel { BirthdayListFragmentViewModel(getBirthdayListUseCase = get()) }
 }

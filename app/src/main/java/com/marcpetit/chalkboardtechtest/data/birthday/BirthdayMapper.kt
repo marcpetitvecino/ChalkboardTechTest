@@ -25,7 +25,7 @@ class BirthdayMapper: Mapper<BirthdayDomainModel, BirthdayDTO> {
     }
 
     private fun formatDate(dateString: String?): LocalDate? {
-        val format = DateTimeFormatter.ofPattern("yyyB-MM-dd'T'HH:mm:ss.SSS'Z'")
+        val format = DateTimeFormatter.ofPattern("yyy-MM-dd'T'HH:mm:ss.SSS'Z'")
         return try {
             LocalDate.parse(dateString, format)
         } catch(e: Exception) {
