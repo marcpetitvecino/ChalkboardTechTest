@@ -8,4 +8,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "ChalkboardTechTest"
 include ':app'
-include ':Networking'
+include ':networking'
