@@ -27,7 +27,7 @@ class RetrofitNetworkClient() : NetworkClient<Retrofit> {
         .build()
 
     private val client = Retrofit.Builder()
-        .baseUrl("https://code-challenge-e9f47.web.app")
+        .baseUrl("https://randomuser.me")
         .addConverterFactory(GsonConverterFactory.create())
         .client(okHttpClient)
         .build()
