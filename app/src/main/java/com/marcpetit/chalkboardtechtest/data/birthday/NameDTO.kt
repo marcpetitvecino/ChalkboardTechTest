@@ -1,4 +1,4 @@
-package com.marcpetit.chalkboardtechtest.data.birthdaylist
+package com.marcpetit.chalkboardtechtest.data.birthday
 
 import com.google.gson.annotations.SerializedName
 
